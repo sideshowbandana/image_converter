@@ -1,0 +1,18 @@
+{
+  "name": "convert",
+  "version": "1.0.0",
+  "description": "Convert SVG to JPG",
+  "main": "index.js",
+  "dependencies": {
+    "file-type": "^8.1.0",
+    "gm": "^1.23.1",
+    "gm-base64": "^1.1.1",
+    "imagemagick": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

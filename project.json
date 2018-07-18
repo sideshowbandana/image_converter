@@ -1,0 +1,8 @@
+{
+  "name": "image_converter",
+  "description": "Convert Image File Types",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::202305538718:role/image_converter_lambda_function",
+  "environment": {}
+}
