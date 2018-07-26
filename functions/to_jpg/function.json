@@ -1,0 +1,6 @@
+{
+  "description": "Convert an object to a jpg",
+  "hooks":{
+    "build": "pip install -t ."
+  }
+}
