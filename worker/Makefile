@@ -9,9 +9,9 @@ auth:
 build:
 	docker build -t ${IMAGE} .
 
-.PHONE: test
+.PHONY: test
 test: build
-	docker run -e "S3_BUCKET=foo" -e "S3_KEY=bar" -it ${IMAGE}:latest
+	docker run --rm -v ${PWD}:/output_dir -e "S3_BUCKET=biorender-jpg-test" -e "S3_KEY=bar" -it ${IMAGE}:latest
 
 .PHONY: push
 push: auth build

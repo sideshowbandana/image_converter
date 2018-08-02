@@ -27,6 +27,23 @@ def handle(event, context):
         taskDefinition='image-converter-task:2', # replace with your task definition name and revision
         count = 1,
         platformVersion='LATEST',
+        overrides={
+        'containerOverrides': [
+            {
+                'name': 'image_converter',
+                'environment': [
+                    {
+                        'name': 'S3_BUCKET',
+                        'value': src_bucket
+                    },
+                    {
+                        'name': 'S3_KEY',
+                        'value': src_key
+                    },
+                ],
+            },
+        ]
+        },
         networkConfiguration={
             'awsvpcConfiguration': {
                 'subnets': [
